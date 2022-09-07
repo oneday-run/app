@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table Data Addition</title>
+    <meta charset="utf-8">
+    <!-- Font Awesome -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
+            rel="stylesheet"
+    />
+    <!-- MDB -->
+    <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"
+    ></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.css">
+    <script src="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.js"></script>
+</head>
+<body>
+
+<script>
+    var $table = $('#table');
+    var mydata =
+        [
+            {
+                "id": 0,
+                "name": "test0",
+                "price": "$0"
+            },
+            {
+                "id": 1,
+                "name": "test1",
+                "price": "$1"
+            },
+            {
+                "id": 2,
+                "name": "test2",
+                "price": "$2"
+            },
+            {
+                "id": 3,
+                "name": "test3",
+                "price": "$3"
+            },
+            {
+                "id": 4,
+                "name": "test4",
+                "price": "$4"
+            },
+            {
+                "id": 5,
+                "name": "test5",
+                "price": "$5"
+            },
+
+
+        ];
+
+    $(function () {
+        $('#table').bootstrapTable({
+            data: mydata
+        });
+    });
+</script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light navbar-dark bg-primary">
+
+
+    <div class="container-fluid">
+        <div class="input-group">
+
+            <button class="btn btn-primary dropdown-toggle" type="button" data-mdb-toggle="dropdown"
+                    aria-expanded="false">
+                Project: App/Example1
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#action#create">1</a></li>
+                <li><a class="dropdown-item" href="#action#read">2</a></li>
+                <li><a class="dropdown-item" href="#action.update">3</a></li>
+                <li><a class="dropdown-item" href="#action.delete">4</a></li>
+            </ul>
+        </div>
+
+        <!-- Heading -->
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-mdb-toggle="collapse"
+                data-mdb-target="#navbarText"
+                aria-controls="navbarText"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Sources</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Network</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Actions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Scenario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Events</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="input-group">
+
+            <button class="btn btn-primary dropdown-toggle" type="button" data-mdb-toggle="dropdown"
+                    aria-expanded="false">
+                Role: Architect
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#role:owner">Owner (CREATE:ORG.SOURCES)</a></li>
+                <li><a class="dropdown-item" href="#role:provider">Manager/Provider (CREATE:PROVIDER.SOURCES code / data
+                    / services)</a></li>
+                <li><a class="dropdown-item" href="#role:architect">Architect (CREATE:APP.SOURCES)</a></li>
+                <li><a class="dropdown-item"
+                       href="#role:developer">Developer(READ:SOURCES,CREATE:CODE,DATA:STRUCTURE)</a></li>
+                <li><a class="dropdown-item" href="#role:tester">Tester (+DEBUG)</a></li>
+                <li><a class="dropdown-item" href="#role:user">User (CREATE:DATA) </a></li>
+                <li><a class="dropdown-item" href="#role:manager">Manager (READ:DATA)</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+
+</nav>
+
+<!--Main Navigation-->
+<header>
+
+</header>
+<!--Main Navigation-->
+
+<div class="container">
+    <table id="table" data-height="460">
+        <thead>
+        <tr>
+            <th data-field="id">ID</th>
+            <th data-field="name">Name</th>
+            <th data-field="price">Value</th>
+        </tr>
+        </thead>
+    </table>
+
+</div>
+
+
+<footer class="bg-dark text-center text-white">
+
+    <div class="container p-3">
+        <!-- <input class="form-control form-control-lg" type="text" placeholder="Large input">-->
+
+        <div class="input-group">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-mdb-toggle="dropdown"
+                    aria-expanded="false">
+                SOURCE: @App.Data.User
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#source:org">@Org [READ]</a></li>
+                <li><a class="dropdown-item" href="#source:action">@Org.Action [READ]</a></li>
+                <li><a class="dropdown-item" href="#source:provider">@Provider.Services [READ]</a></li>
+                <li><a class="dropdown-item" href="#source:code">@Provider.Code Libs</a></li>
+                <li><a class="dropdown-item" href="#source:data">@App.Data [READ]</a></li>
+                <li><a class="dropdown-item" href="#source:app">@App.Data.User [CREATE]</a></li>
+            </ul>
+            <!-- Large input apidsl.get("letpdf").letpdf.list("*pdf").letcsv.toHtml() -->
+            <input type="text" class="form-control" aria-label="Text input with 2 dropdown buttons"
+                   aria-valuetext="apidsl.get(readpdf).letpdf.list(*pdf).letcsv.render()"/>
+
+
+
+            <button class="btn btn-primary dropdown-toggle" type="button" data-mdb-toggle="dropdown"
+                    aria-expanded="false">
+                Action: Create
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#action#create">Create</a></li>
+                <li><a class="dropdown-item" href="#action#read">Read</a></li>
+                <li><a class="dropdown-item" href="#action.update">Update</a></li>
+                <li><a class="dropdown-item" href="#action.delete">Delete</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2023 Copyright:
+        <a class="text-white" href="https://OneDayRun.com/">OneDayRun.com</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+
+</body>
+</html>
