@@ -1,3 +1,4 @@
+./DOCS/MENU.md
 ./DOCS/README.md
 ./CHAT/README.md
 ./TAB/EVENT.md
