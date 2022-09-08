@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "name": "test0",
+    "right": "READ"
+  },
+  {
+    "id": 1,
+    "name": "test1",
+    "price": "READ"
+  },
+  {
+    "id": 2,
+    "name": "test2",
+    "price": "READ"
+  },
+  {
+    "id": 3,
+    "name": "test3",
+    "price": "CREATE"
+  },
+  {
+    "id": 4,
+    "name": "test4",
+    "price": "READ"
+  },
+  {
+    "id": 5,
+    "name": "test5",
+    "price": "CREATE"
+  }
+]

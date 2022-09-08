@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Table Data Addition</title>
+    <title>OneDay.Run - Build your frontend and backend of app in one day & run!</title>
     <meta charset="utf-8">
     <!-- Font Awesome -->
     <link
@@ -25,61 +25,20 @@
             src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"
     ></script>
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.css">
     <script src="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.js"></script>
+
+
+    <!-- DATA -->
+    <script src="/js/table.js"></script>
+    <script src="/js/source.js"></script>
+    <script src="/js/flow.js"></script>
 </head>
 <body>
 
-<script>
-    var $table = $('#table');
-    var mydata =
-        [
-            {
-                "id": 0,
-                "name": "test0",
-                "price": "$0"
-            },
-            {
-                "id": 1,
-                "name": "test1",
-                "price": "$1"
-            },
-            {
-                "id": 2,
-                "name": "test2",
-                "price": "$2"
-            },
-            {
-                "id": 3,
-                "name": "test3",
-                "price": "$3"
-            },
-            {
-                "id": 4,
-                "name": "test4",
-                "price": "$4"
-            },
-            {
-                "id": 5,
-                "name": "test5",
-                "price": "$5"
-            },
-
-
-        ];
-
-    $(function () {
-        $('#table').bootstrapTable({
-            data: mydata
-        });
-    });
-</script>
-
 
 <nav class="navbar navbar-expand-lg navbar-light navbar-dark bg-primary">
-
 
     <div class="container-fluid">
         <div class="input-group">
@@ -199,7 +158,6 @@
                    aria-valuetext="apidsl.get(readpdf).letpdf.list(*pdf).letcsv.render()"/>
 
 
-
             <button class="btn btn-primary dropdown-toggle" type="button" data-mdb-toggle="dropdown"
                     aria-expanded="false">
                 Action: Create
@@ -220,6 +178,13 @@
     </div>
     <!-- Copyright -->
 </footer>
+
+
+
+<script type="text/javascript">
+
+</script>
+
 
 </body>
 </html>
